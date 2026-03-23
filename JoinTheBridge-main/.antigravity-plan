@@ -1,0 +1,67 @@
+{
+    "project": "BRIDGE-Education-Platform",
+    "version": "2.0.0",
+    "designSystem": "Modern Institutional",
+    "framework": "Next.js 14 / Tailwind CSS",
+    "palette": {
+        "primary": "#0F172A (Deep Navy)",
+        "secondary": "#374151 (Charcoal)",
+        "accent": "#166534 (Forest Green)",
+        "accentLight": "#22C55E"
+    },
+    "typography": "Inter / Helvetica Neue",
+    "siteMap": {
+        "/": {
+            "name": "Home — Impact & Stats",
+            "sections": [
+                "Hero",
+                "Stats Row",
+                "Mission",
+                "Subject Cards",
+                "CTA"
+            ]
+        },
+        "/staff": {
+            "name": "Staff & Leadership",
+            "sections": [
+                "Hero",
+                "12-Person Profile Grid",
+                "Apply CTA"
+            ]
+        },
+        "/get-involved": {
+            "name": "Get Involved",
+            "sections": [
+                "Hero",
+                "General Volunteer Roles",
+                "Special Positions",
+                "Donate CTA"
+            ]
+        },
+        "/volunteer": {
+            "name": "Volunteer Portal",
+            "sections": [
+                "Hero",
+                "4-Step Process",
+                "Google Form Embed"
+            ]
+        },
+        "/states/[slug]": {
+            "name": "State Landing Page (Dynamic)",
+            "source": "/content/states/*.md",
+            "sections": [
+                "Hero",
+                "Active Programs",
+                "Markdown Content",
+                "Partner Venues Sidebar"
+            ]
+        }
+    },
+    "components": [
+        "Header (sticky nav, mobile menu)",
+        "Footer (multi-column, mission, links)",
+        "SubjectCard (Math, Science, Literacy, Economics)",
+        "State Page (dynamic from Markdown + frontmatter)"
+    ],
+    "motionPolicy": "Utility only — fade-in and slide-up transitions. No physics, no floating elements."
+}
