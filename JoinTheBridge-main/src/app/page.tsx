@@ -140,9 +140,6 @@ export default function Home() {
                         <Link href="/volunteer" className="btn-primary">
                             Volunteer Now
                         </Link>
-                        <Link href="/staff" className="px-6 py-3 rounded-lg border-2 border-gray-600 text-gray-300 font-semibold text-sm hover:bg-gray-800 transition-colors">
-                            Meet Our Team
-                        </Link>
                     </div>
                 </div>
             </section>

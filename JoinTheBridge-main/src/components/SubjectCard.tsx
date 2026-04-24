@@ -39,9 +39,7 @@ const SUBJECTS: SubjectCardProps[] = [
 function SubjectCard({ title, description, icon, color }: SubjectCardProps) {
     return (
         <div className="card-hover p-6">
-            <div
-                className={`w-12 h-12 rounded-lg ${color} flex items-center justify-center mb-4`}
-            >
+            <div className={`w-12 h-12 rounded-lg ${color} flex items-center justify-center mb-4`}>
                 <svg
                     width="24"
                     height="24"

@@ -6,7 +6,7 @@ import Link from "next/link";
 const NAV_LINKS = [
     { label: "Home", href: "/" },
     { label: "Impact", href: "/#impact" },
-    { label: "Our Team", href: "/staff" },
+    { label: "State Leadership", href: "/state-leadership" },
     { label: "Subjects", href: "/#subjects" },
     { label: "Get Involved", href: "/get-involved" },
 ];

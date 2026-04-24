@@ -48,12 +48,16 @@ import { createClient } from "@supabase/supabase-js";
  *
  * ────────────────────────────────────────────────────────────────────── */
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder-project.supabase.co";
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-  console.warn(
-    "⚠️ Warning: Missing Supabase environment variables. See src/lib/supabase.ts for setup instructions."
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error(
+    "❌ FATAL: Missing Supabase environment variables.\n" +
+    "Add to .env.local:\n" +
+    "  NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co\n" +
+    "  NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY\n" +
+    "See src/lib/supabase.ts for setup instructions."
   );
 }
 

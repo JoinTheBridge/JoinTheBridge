@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const QUICK_LINKS = [
     { label: "Home", href: "/" },
-    { label: "Our Team", href: "/staff" },
     { label: "Get Involved", href: "/get-involved" },
     { label: "Volunteer Portal", href: "/volunteer" },
 ];
