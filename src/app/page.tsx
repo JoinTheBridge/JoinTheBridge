@@ -4,10 +4,8 @@ import SubjectCards from "@/components/SubjectCard";
 /* ─── Stats Data ───────────────────────────────────────────────────────── */
 
 const STATS = [
-    { number: "2,400+", label: "Families Served" },
-    { number: "8", label: "States Active" },
+    { number: "4", label: "States Active" },
     { number: "4", label: "Subjects Taught" },
-    { number: "15,000+", label: "Volunteer Hours" },
 ];
 
 /* ─── Page ─────────────────────────────────────────────────────────────── */
@@ -51,7 +49,7 @@ export default function Home() {
             {/* ── Impact Stats ─── */}
             <section id="impact" className="border-b border-gray-200">
                 <div className="container-grid py-16">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 gap-8 max-w-sm mx-auto w-full">
                         {STATS.map((stat) => (
                             <div key={stat.label} className="stat-block">
                                 <div className="stat-number">{stat.number}</div>

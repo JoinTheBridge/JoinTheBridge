@@ -187,7 +187,7 @@ export default function GetInvolvedPage() {
                         and the expansion of BRIDGE to new states and communities.
                     </p>
                     <a
-                        href="#"
+                        href="mailto:info@jointhebridge.org?subject=Donation%20Inquiry"
                         className="btn-primary text-base px-8 py-4"
                     >
                         Donate Now
