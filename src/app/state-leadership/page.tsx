@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
 
-type StateName = "Maryland" | "Mississippi" | "New York" | "Philadelphia";
+type StateName = "Main Branch" | "Maryland" | "Mississippi" | "New York";
 
 type Member = {
     name: string;
@@ -12,9 +12,17 @@ type Member = {
 };
 
 const LEADERSHIP_DATA: Record<StateName, Member[]> = {
+    "Main Branch": [
+        { name: "Jacky", role: "Director" },
+        { name: "Lucas", role: "Founder" },
+        { name: "Sarayu", role: "Founder" },
+        { name: "Rishan", role: "Founder" },
+        { name: "Koeyi", role: "Founder" },
+        { name: "Rohan", role: "Director of Tech" },
+    ],
     "Maryland": [
-        { name: "Sarayu", role: "Cofounder" },
-        { name: "Rishan", role: "Cofounder" },
+        { name: "Sarayu", role: "Founder" },
+        { name: "Rishan", role: "Founder" },
         { name: "Moukthika", role: "Admin/Head of Marketing" },
         { name: "Rohan", role: "Head of Tech" },
         { name: "Tirth", role: "Head of Tech" },
@@ -24,13 +32,13 @@ const LEADERSHIP_DATA: Record<StateName, Member[]> = {
         { name: "Svanik", role: "Head of Finance" },
     ],
     "Mississippi": [
-        { name: "Koeyi", role: "Cofounder" },
+        { name: "Koeyi", role: "Founder" },
         { name: "Libby", role: "Head of Math" },
         { name: "CJ", role: "Head of English" },
         { name: "Avery", role: "Head of History" },
     ],
     "New York": [
-        { name: "Lucas", role: "Cofounder" },
+        { name: "Lucas", role: "Founder" },
         { name: "Isaac", role: "Secretary" },
         { name: "Matthew", role: "Operations Manager" },
         { name: "Owen", role: "Outreach Coordinator" },
@@ -42,15 +50,12 @@ const LEADERSHIP_DATA: Record<StateName, Member[]> = {
         { name: "Chase", role: "History" },
         
     ],
-    "Philadelphia": [
-        { name: "Jacky", role: "Cofounder" },
-    ]
 };
 
-const STATES: StateName[] = ["Maryland", "Mississippi", "New York","Philadelphia"];
+const STATES: StateName[] = ["Main Branch", "Maryland", "Mississippi", "New York"];
 
 export default function StateLeadershipPage() {
-    const [activeState, setActiveState] = useState<StateName>("Maryland");
+    const [activeState, setActiveState] = useState<StateName>("Main Branch");
 
     return (
         <main className="min-h-screen bg-gray-50 flex flex-col">
