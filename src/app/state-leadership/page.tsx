@@ -13,17 +13,15 @@ type Member = {
 
 const LEADERSHIP_DATA: Record<StateName, Member[]> = {
     "Maryland": [
+        { name: "Sarayu", role: "Cofounder" },
         { name: "Rishan", role: "Cofounder" },
-        { name: "Rohan", role: "Head of Technology" },
-        { name: "Tirth", role: "Vice Head of Technology" },
-        { name: "Sriya", role: "Cohead of Economics" },
-        { name: "Mohana", role: "Cohead of Economics" },
-        { name: "Mouthika", role: "Marketing Cohead" },
-        { name: "Sarayu", role: "Marketing Cohead" },
-        { name: "Adarsh", role: "Head of Social Media" },
-        { name: "Svanik", role: "Head of Finance" },
-        { name: "Tejashri", role: "Head of Science" },
+        { name: "Moukthika", role: "Admin/Head of Marketing" },
+        { name: "Rohan", role: "Head of Tech" },
+        { name: "Tirth", role: "Head of Tech" },
+        { name: "Mohana", role: "Head of Econ" },
+        { name: "Sriya", role: "Head of Education" },
         { name: "Sandy", role: "Head of Math" },
+        { name: "Svanik", role: "Head of Finance" },
     ],
     "Mississippi": [
         { name: "Koeyi", role: "Cofounder" },
