@@ -4,7 +4,7 @@ import SubjectCards from "@/components/SubjectCard";
 /* ─── Stats Data ───────────────────────────────────────────────────────── */
 
 const STATS = [
-    { number: "4", label: "States Active" },
+    { number: "3", label: "States Active" },
     { number: "4", label: "Subjects Taught" },
 ];
 
