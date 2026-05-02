@@ -16,16 +16,16 @@ const LEADERSHIP_DATA: Record<StateName, Member[]> = {
         { name: "Jacky", role: "Director" },
         { name: "Lucas", role: "Founder" },
         { name: "Sarayu", role: "Founder" },
-        { name: "Rishan", role: "Founder" },
+
         { name: "Koeyi", role: "Founder" },
         { name: "Rohan", role: "Tech Lead" },
     ],
     "Maryland": [
         { name: "Sarayu", role: "Founder" },
-        { name: "Rishan", role: "Founder" },
+
         { name: "Moukthika", role: "Admin/Head of Marketing" },
         { name: "Rohan", role: "Tech Lead" },
-        { name: "Tirth", role: "Head of Tech" },
+
         { name: "Mohana", role: "Head of Econ" },
         { name: "Sriya", role: "Head of Education" },
         { name: "Sandy", role: "Head of Math" },
