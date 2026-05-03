@@ -28,7 +28,8 @@ const LEADERSHIP_DATA: Record<StateName, Member[]> = {
 
         { name: "Mohana", role: "Head of Econ" },
         { name: "Sriya", role: "Head of Education" },
-        { name: "Sandy", role: "Head of Math" },
+        { name: "Sandy", role: "Cohead of Math" },
+        { name: "Rishan", role: "Cohead of Math" },
         { name: "Svanik", role: "Head of Finance" },
     ],
     "Mississippi": [
