@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -13,6 +13,18 @@ const NAV_LINKS = [
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
+
+    // Prevent body scrolling when mobile menu is open
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [mobileOpen]);
 
     return (
         <header className="sticky top-0 z-50 bg-brand-navy border-b border-gray-800">
@@ -90,7 +102,7 @@ export default function Header() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="block py-2 text-sm font-medium text-gray-300 hover:text-white"
+                                className="block py-3 text-base font-medium text-gray-300 hover:text-white"
                             >
                                 {link.label}
                             </Link>

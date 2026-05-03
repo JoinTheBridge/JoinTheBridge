@@ -49,7 +49,7 @@ export default function Home() {
             {/* ── Impact Stats ─── */}
             <section id="impact" className="border-b border-gray-200">
                 <div className="container-grid py-16">
-                    <div className="grid grid-cols-2 gap-8 max-w-sm mx-auto w-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-sm mx-auto w-full">
                         {STATS.map((stat) => (
                             <div key={stat.label} className="stat-block">
                                 <div className="stat-number">{stat.number}</div>
