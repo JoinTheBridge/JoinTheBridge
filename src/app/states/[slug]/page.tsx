@@ -57,9 +57,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-    const data = getStateData(params.slug);
+    const { slug } = await params;
+    const data = getStateData(slug);
     if (!data) return { title: "State Not Found — BRIDGE" };
     return {
         title: `BRIDGE in ${data.frontmatter.title}`,
@@ -72,9 +73,10 @@ export async function generateMetadata({
 export default async function StatePage({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) {
-    const data = getStateData(params.slug);
+    const { slug } = await params;
+    const data = getStateData(slug);
 
     if (!data) {
         return (
