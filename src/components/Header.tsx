@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NAV_LINKS = [
     { label: "Home", href: "/" },
@@ -30,13 +31,15 @@ export default function Header() {
         <header className="sticky top-0 z-50 bg-brand-navy border-b border-gray-800">
             <div className="container-grid flex items-center justify-between h-16">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded bg-brand-forest flex items-center justify-center">
-                        <span className="text-white font-extrabold text-sm">B</span>
-                    </div>
-                    <span className="text-white font-bold text-lg tracking-tight">
-                        BRIDGE
-                    </span>
+                <Link href="/" className="flex items-center">
+                    <Image 
+                        src="/logo-new.png" 
+                        alt="Bridge Logo" 
+                        width={56} 
+                        height={56} 
+                        className="rounded-full object-contain"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const QUICK_LINKS = [
     { label: "Home", href: "/" },
@@ -21,10 +22,13 @@ export default function Footer() {
                     {/* Mission */}
                     <div className="md:col-span-5">
                         <div className="flex items-center gap-2.5 mb-4">
-                            <div className="w-8 h-8 rounded bg-brand-forest flex items-center justify-center">
-                                <span className="text-white font-extrabold text-sm">B</span>
-                            </div>
-                            <span className="text-white font-bold text-lg">BRIDGE</span>
+                            <Image 
+                                src="/logo-new.png" 
+                                alt="Bridge Logo" 
+                                width={96} 
+                                height={96} 
+                                className="rounded-full object-contain"
+                            />
                         </div>
                         <p className="text-sm leading-relaxed max-w-sm">
                             Build Resilience in Development, Growth &amp; Education. We
