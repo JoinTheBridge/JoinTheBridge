@@ -14,8 +14,8 @@ import { createClient } from "@supabase/supabase-js";
  *      id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
  *      full_name TEXT NOT NULL,
  *      email TEXT NOT NULL,
- *      role_type TEXT NOT NULL CHECK (role_type IN ('Volunteer', 'Head of Subject')),
- *      target_subject TEXT NOT NULL CHECK (target_subject IN ('Mathematics', 'Science', 'Literacy', 'Economics')),
+ *      role_type TEXT NOT NULL CHECK (role_type IN ('Volunteer (Tutor)', 'Head of Subject', 'Curriculum Developer', 'Operations Manager', 'Secretary / Admin', 'Finance Coordinator', 'Outreach Coordinator', 'Social Media / Marketing', 'Video Editor', 'Graphic Designer', 'Web Developer')),
+ *      target_subject TEXT NOT NULL CHECK (target_subject IN ('Mathematics', 'Science', 'Literacy', 'Economics', 'Not Applicable')),
  *      state TEXT NOT NULL,
  *      status TEXT NOT NULL DEFAULT 'Pending' CHECK (status IN ('Pending', 'Reviewed', 'Accepted', 'Rejected')),
  *      created_at TIMESTAMPTZ DEFAULT NOW()
@@ -69,8 +69,19 @@ export interface Application {
   id: string;
   full_name: string;
   email: string;
-  role_type: "Volunteer" | "Head of Subject";
-  target_subject: "Mathematics" | "Science" | "Literacy" | "Economics";
+  role_type: 
+    | "Volunteer (Tutor)" 
+    | "Head of Subject" 
+    | "Curriculum Developer"
+    | "Operations Manager"
+    | "Secretary / Admin"
+    | "Finance Coordinator"
+    | "Outreach Coordinator"
+    | "Social Media / Marketing"
+    | "Video Editor"
+    | "Graphic Designer"
+    | "Web Developer";
+  target_subject: "Mathematics" | "Science" | "Literacy" | "Economics" | "Not Applicable";
   state: string;
   status: "Pending" | "Reviewed" | "Accepted" | "Rejected";
   created_at: string;

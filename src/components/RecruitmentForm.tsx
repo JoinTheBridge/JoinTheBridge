@@ -5,7 +5,14 @@ import { supabase, type ApplicationInsert } from "@/lib/supabase";
 
 /* ─── Constants ────────────────────────────────────────────────────────── */
 
-const SUBJECTS = ["Mathematics", "Science", "Literacy", "Economics"] as const;
+const SUBJECTS = ["Mathematics", "Science", "Literacy", "Economics", "Not Applicable"] as const;
+
+const ROLES = [
+  { group: "Education", roles: ["Volunteer (Tutor)", "Head of Subject", "Curriculum Developer"] },
+  { group: "Operations & Admin", roles: ["Operations Manager", "Secretary / Admin", "Finance Coordinator"] },
+  { group: "Marketing & Outreach", roles: ["Outreach Coordinator", "Social Media / Marketing"] },
+  { group: "Tech & Creative", roles: ["Video Editor", "Graphic Designer", "Web Developer"] },
+];
 
 const US_STATES = [
   "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
@@ -135,8 +142,13 @@ export default function RecruitmentForm() {
               className="w-full px-4 py-2.5 rounded-lg border border-gray-300 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-brand-forest/30 focus:border-brand-forest transition-colors"
             >
               <option value="">Select a role</option>
-              <option value="Volunteer">Volunteer</option>
-              <option value="Head of Subject">Head of Subject</option>
+              {ROLES.map((group) => (
+                <optgroup key={group.group} label={group.group}>
+                  {group.roles.map((role) => (
+                    <option key={role} value={role}>{role}</option>
+                  ))}
+                </optgroup>
+              ))}
             </select>
           </div>
 
