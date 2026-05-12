@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Get Involved — BRIDGE",
+    title: "Get Involved - BRIDGE",
     description:
         "Join BRIDGE as a volunteer tutor, subject lead, or state coordinator. Multiple pathways to make a difference in your community.",
 };
@@ -44,7 +44,7 @@ const SPECIAL_POSITIONS = [
     {
         title: "State Coordinator",
         description:
-            "Manage all BRIDGE operations within a state — recruiting volunteers, securing venues, and coordinating with national leadership.",
+            "Manage all BRIDGE operations within a state - recruiting volunteers, securing venues, and coordinating with national leadership.",
         qualifications: "Organizational leadership, community connections",
         subjects: [],
     },
@@ -73,7 +73,7 @@ export default function GetInvolvedPage() {
                     </h1>
                     <p className="text-gray-400 max-w-2xl text-lg">
                         BRIDGE runs entirely on the dedication of volunteers. Whether you
-                        have one hour a week or want to lead an entire subject — we have a
+                        have one hour a week or want to lead an entire subject - we have a
                         role that fits you.
                     </p>
                 </div>
@@ -84,7 +84,7 @@ export default function GetInvolvedPage() {
                 <div className="container-grid py-20">
                     <h2 className="text-3xl font-extrabold mb-2">Volunteer Roles</h2>
                     <p className="text-gray-500 mb-10 max-w-2xl">
-                        No special qualifications needed — just a willingness to help
+                        No special qualifications needed - just a willingness to help
                         families build stronger futures.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

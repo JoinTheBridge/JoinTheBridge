@@ -38,7 +38,7 @@
 
 @layer components {
 
-  /* Institutional card — clean, bordered, grounded */
+  /* Institutional card - clean, bordered, grounded */
   .card {
     @apply bg-white border border-gray-200 rounded-lg shadow-sm;
   }
@@ -70,12 +70,12 @@
     @apply mt-2 text-sm font-medium text-gray-500 uppercase tracking-wider;
   }
 
-  /* CTA button — primary */
+  /* CTA button - primary */
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-forest text-white font-semibold text-sm hover:bg-green-800 transition-colors;
   }
 
-  /* CTA button — secondary */
+  /* CTA button - secondary */
   .btn-secondary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-brand-navy text-brand-navy font-semibold text-sm hover:bg-brand-navy hover:text-white transition-colors;
   }

@@ -9,7 +9,7 @@ const SUBJECTS: SubjectCardProps[] = [
     {
         title: "Mathematics",
         description:
-            "From arithmetic fundamentals to algebra — building the quantitative reasoning skills that unlock career opportunities.",
+            "From arithmetic fundamentals to algebra - building the quantitative reasoning skills that unlock career opportunities.",
         icon: "M4 4h16v16H4zM9 9h6M9 12h4M9 15h6",
         color: "bg-blue-600",
     },
@@ -23,14 +23,14 @@ const SUBJECTS: SubjectCardProps[] = [
     {
         title: "Literacy",
         description:
-            "Reading comprehension, writing skills, and communication — the foundation for success in every subject and career path.",
+            "Reading comprehension, writing skills, and communication - the foundation for success in every subject and career path.",
         icon: "M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5V4.5A2.5 2.5 0 016.5 2H20v17H6.5A2.5 2.5 0 004 19.5z",
         color: "bg-amber-600",
     },
     {
         title: "Economics",
         description:
-            "Budgeting, credit, savings, and financial planning — practical money management skills that break the cycle of poverty.",
+            "Budgeting, credit, savings, and financial planning - practical money management skills that break the cycle of poverty.",
         icon: "M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6",
         color: "bg-brand-forest",
     },

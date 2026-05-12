@@ -129,7 +129,7 @@ export default function RecruitmentForm() {
           />
         </div>
 
-        {/* Role Type & Subject — side by side */}
+        {/* Role Type & Subject - side by side */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
             <label htmlFor="role_type" className="block text-sm font-semibold text-brand-navy mb-1.5">

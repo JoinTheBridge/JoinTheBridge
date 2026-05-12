@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RecruitmentForm from "@/components/RecruitmentForm";
 
 export const metadata: Metadata = {
-    title: "Volunteer Portal — BRIDGE",
+    title: "Volunteer Portal - BRIDGE",
     description:
         "Apply to volunteer with BRIDGE. Fill out our application form and join a team of educators working to mitigate poverty through accessible education.",
 };

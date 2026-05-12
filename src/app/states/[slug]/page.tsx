@@ -61,7 +61,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { slug } = await params;
     const data = getStateData(slug);
-    if (!data) return { title: "State Not Found — BRIDGE" };
+    if (!data) return { title: "State Not Found - BRIDGE" };
     return {
         title: `BRIDGE in ${data.frontmatter.title}`,
         description: data.frontmatter.description,

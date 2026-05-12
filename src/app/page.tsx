@@ -28,7 +28,7 @@ export default function Home() {
                         </h1>
                         <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
                             We mitigate poverty through multi-subject academic support and
-                            economic literacy — delivered in accessible weekend programs at
+                            economic literacy - delivered in accessible weekend programs at
                             schools and churches across the country.
                         </p>
                         <div className="flex flex-wrap gap-4">
@@ -72,7 +72,7 @@ export default function Home() {
                             </h2>
                             <p className="text-gray-600 leading-relaxed mb-4">
                                 BRIDGE operates weekend programs in community buildings that
-                                families already know and trust — schools and churches in
+                                families already know and trust - schools and churches in
                                 low-income neighborhoods. Our volunteer tutors deliver
                                 curriculum in four core subjects, with a special emphasis on
                                 economics and money management.
@@ -80,7 +80,7 @@ export default function Home() {
                             <p className="text-gray-600 leading-relaxed">
                                 Our goal is cross-state expansion across the USA, making
                                 high-quality academic support accessible to every community
-                                that needs it — not just those who can afford it.
+                                that needs it - not just those who can afford it.
                             </p>
                         </div>
                         <div className="lg:col-span-5">
@@ -91,7 +91,7 @@ export default function Home() {
                                         "Weekend programs in schools & churches",
                                         "4 core subjects: Math, Science, Literacy, Economics",
                                         "Volunteer-led with professional curricula",
-                                        "Free for all families — no barriers to entry",
+                                        "Free for all families - no barriers to entry",
                                         "Cross-state coordination by Heads of Subject",
                                     ].map((item) => (
                                         <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
@@ -132,7 +132,7 @@ export default function Home() {
                     </h2>
                     <p className="text-gray-400 max-w-lg mx-auto mb-8">
                         Whether you&apos;re a student, educator, finance professional, or
-                        community leader — BRIDGE has a role for you.
+                        community leader - BRIDGE has a role for you.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/volunteer" className="btn-primary">
