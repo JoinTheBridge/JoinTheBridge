@@ -14,6 +14,9 @@ export const metadata: Metadata = {
             "Multi-subject tutoring and economic literacy for low-income communities through accessible weekend programs.",
         type: "website",
     },
+    verification: {
+        google: "sMOJxqi5KUZ1Hlq2WBDn4koC6aKTiRLtvYX06eQIU_U",
+    },
 };
 
 export default function RootLayout({
