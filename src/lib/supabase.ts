@@ -69,21 +69,14 @@ export interface Application {
   id: string;
   full_name: string;
   email: string;
-  role_type: 
-    | "Volunteer (Tutor)" 
-    | "Head of Subject" 
-    | "Curriculum Developer"
-    | "Operations Manager"
-    | "Secretary / Admin"
-    | "Finance Coordinator"
-    | "Outreach Coordinator"
-    | "Social Media / Marketing"
-    | "Video Editor"
-    | "Graphic Designer"
-    | "Web Developer";
+  phone?: string;
+  /** The role title string — validated against roles.ts at the app layer */
+  role_type: string;
   target_subject: "Mathematics" | "Science" | "Literacy" | "Economics" | "Not Applicable";
   state: string;
   status: "Pending" | "Reviewed" | "Accepted" | "Rejected";
+  /** JSONB object of role-specific Q&A answers keyed by question id */
+  extra_answers?: Record<string, string>;
   created_at: string;
 }
 
