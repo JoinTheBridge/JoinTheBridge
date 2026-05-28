@@ -3,6 +3,10 @@
 /.pnp
 .pnp.js
 
+# pnpm
+.pnpm-store
+pnpm-debug.log*
+
 # testing
 /coverage
 
@@ -13,6 +17,9 @@
 # production
 /build
 
+# local env files
+.env*
+
 # misc
 .DS_Store
 *.pem
@@ -22,8 +29,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# supabase CLI temp
+supabase/.temp/
 
 # vercel
 .vercel
@@ -31,3 +38,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# npm lockfile if using pnpm only
+package-lock.json
