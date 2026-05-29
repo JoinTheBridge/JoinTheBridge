@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase, type Application } from "@/lib/supabase";
 import { ROLES, GROUP_COLORS, type RoleGroup } from "@/lib/roles";
+import { RoleIcon } from "@/components/RoleIcon";
 
 /* ─── Types ─────────────────────────────────────────────────────────────── */
 
@@ -163,7 +164,7 @@ function AppCard({
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div>
           <div className="flex items-center gap-2 flex-wrap mb-1">
-            <span className="text-lg">{role?.icon ?? "📄"}</span>
+            <span className="text-lg"><RoleIcon iconName={role?.icon} className="w-5 h-5" /></span>
             <h3 className="font-bold text-brand-navy text-base">{app.full_name}</h3>
             <span
               className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${STATUS_COLORS[app.status]}`}

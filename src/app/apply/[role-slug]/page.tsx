@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { RoleIcon } from "@/components/RoleIcon";
 import Link from "next/link";
 import { getRoleBySlug, ROLE_GROUPS, getRolesByGroup, GROUP_COLORS } from "@/lib/roles";
 import ApplicationForm from "@/components/ApplicationForm";
@@ -52,7 +53,7 @@ export default async function ApplyPage({ params }: Props) {
           </nav>
 
           <div className="flex items-start gap-5">
-            <span className="text-5xl hidden sm:block">{role.icon}</span>
+            <span className="text-5xl hidden sm:block"><RoleIcon iconName={role.icon} className="w-12 h-12" /></span>
             <div>
               <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-2">
                 {role.title}
@@ -133,7 +134,7 @@ export default async function ApplyPage({ params }: Props) {
                           href={`/apply/${r.slug}`}
                           className="flex items-center gap-2 text-sm text-gray-600 hover:text-brand-forest transition-colors"
                         >
-                          <span>{r.icon}</span>
+                          <span><RoleIcon iconName={r.icon} className="w-5 h-5" /></span>
                           <span>{r.title} →</span>
                         </Link>
                       </li>

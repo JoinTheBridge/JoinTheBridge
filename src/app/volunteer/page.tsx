@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ROLES, ROLE_GROUPS, getRolesByGroup, GROUP_COLORS } from "@/lib/roles";
+import { RoleIcon } from "@/components/RoleIcon";
 
 export const metadata: Metadata = {
   title: "Volunteer – Apply to BRIDGE",
@@ -128,7 +129,7 @@ export default function VolunteerPage() {
                       >
                         {/* Icon + badge */}
                         <div className="flex items-start justify-between mb-4">
-                          <span className="text-3xl">{role.icon}</span>
+                          <span className="text-3xl"><RoleIcon iconName={role.icon} className="w-8 h-8" /></span>
                           <span
                             className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${colors.bg} ${colors.text} ${colors.border}`}
                           >

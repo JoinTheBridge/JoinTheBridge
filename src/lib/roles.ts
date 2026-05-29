@@ -46,7 +46,7 @@ export const ROLES: RoleConfig[] = [
     group: "Education",
     description:
       "Deliver weekend tutoring sessions in one of our four core subjects at local schools and churches.",
-    icon: "📚",
+    icon: "BookOpen",
     questions: [
       {
         id: "subjects_comfortable",
@@ -97,7 +97,7 @@ export const ROLES: RoleConfig[] = [
     group: "Education",
     description:
       "Lead and coordinate volunteer tutors across states for a specific academic subject.",
-    icon: "🎓",
+    icon: "GraduationCap",
     questions: [
       {
         id: "subject_to_lead",
@@ -136,7 +136,7 @@ export const ROLES: RoleConfig[] = [
     group: "Education",
     description:
       "Design and refine lesson plans and materials used by our volunteer tutors nationwide.",
-    icon: "✏️",
+    icon: "PenTool",
     questions: [
       {
         id: "subject_area",
@@ -176,7 +176,7 @@ export const ROLES: RoleConfig[] = [
     group: "Operations & Admin",
     description:
       "Oversee day-to-day logistics, coordinate across state chapters, and keep BRIDGE running smoothly.",
-    icon: "⚙️",
+    icon: "Settings",
     questions: [
       {
         id: "ops_experience",
@@ -215,7 +215,7 @@ export const ROLES: RoleConfig[] = [
     group: "Operations & Admin",
     description:
       "Handle communications, scheduling, record-keeping, and administrative support for BRIDGE.",
-    icon: "📋",
+    icon: "ClipboardList",
     questions: [
       {
         id: "admin_experience",
@@ -247,7 +247,7 @@ export const ROLES: RoleConfig[] = [
     group: "Operations & Admin",
     description:
       "Manage budgets, track expenses, and support the financial health of BRIDGE operations.",
-    icon: "💰",
+    icon: "CircleDollarSign",
     questions: [
       {
         id: "finance_background",
@@ -287,7 +287,7 @@ export const ROLES: RoleConfig[] = [
     group: "Marketing & Outreach",
     description:
       "Build relationships with schools, churches, and community organizations to expand BRIDGE's reach.",
-    icon: "🤝",
+    icon: "Handshake",
     questions: [
       {
         id: "outreach_experience",
@@ -320,7 +320,7 @@ export const ROLES: RoleConfig[] = [
     group: "Marketing & Outreach",
     description:
       "Grow BRIDGE's online presence, manage social channels, and create compelling content.",
-    icon: "📣",
+    icon: "Megaphone",
     questions: [
       {
         id: "platforms_managed",
@@ -366,7 +366,7 @@ export const ROLES: RoleConfig[] = [
     group: "Tech & Creative",
     description:
       "Produce and edit video content for BRIDGE's programs, social media, and outreach campaigns.",
-    icon: "🎬",
+    icon: "Clapperboard",
     questions: [
       {
         id: "editing_software",
@@ -405,7 +405,7 @@ export const ROLES: RoleConfig[] = [
     group: "Tech & Creative",
     description:
       "Create visuals, branding assets, and marketing materials that represent BRIDGE's mission.",
-    icon: "🎨",
+    icon: "Palette",
     questions: [
       {
         id: "design_software",
@@ -444,7 +444,7 @@ export const ROLES: RoleConfig[] = [
     group: "Tech & Creative",
     description:
       "Build and maintain BRIDGE's web presence, tools, and internal platforms.",
-    icon: "💻",
+    icon: "Code",
     questions: [
       {
         id: "tech_stack",

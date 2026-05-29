@@ -2,6 +2,7 @@
 
 import { useState, useCallback, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { RoleIcon } from "@/components/RoleIcon";
 import { supabase, type ApplicationInsert } from "@/lib/supabase";
 import type { RoleConfig } from "@/lib/roles";
 
@@ -210,7 +211,7 @@ export default function ApplicationForm({ role }: Props) {
               {step === 1 ? "Personal Information" : "Role-Specific Questions"}
             </h3>
           </div>
-          <span className="text-2xl">{role.icon}</span>
+          <span className="text-2xl"><RoleIcon iconName={role.icon} className="w-6 h-6" /></span>
         </div>
         {/* Progress bar */}
         <div className="w-full bg-white/20 rounded-full h-1.5">
