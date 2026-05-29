@@ -50,7 +50,7 @@ export default function RecruitmentForm() {
       state: formData.get("state") as string,
     };
 
-    const { error } = await supabase.from("applications").insert(payload);
+    const { error } = await supabase.from("applications_staging").insert(payload);
 
     if (error) {
       setStatus("error");

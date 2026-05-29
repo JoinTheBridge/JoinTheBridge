@@ -312,7 +312,7 @@ export default function AdminDashboard() {
     setLoading(true);
     setError("");
     const { data, error } = await supabase
-      .from("applications")
+      .from("applications_staging")
       .select("*")
       .order("created_at", { ascending: false });
 
@@ -333,7 +333,7 @@ export default function AdminDashboard() {
     setApplications((prev) =>
       prev.map((a) => (a.id === id ? { ...a, status: newStatus } : a))
     );
-    await supabase.from("applications").update({ status: newStatus }).eq("id", id);
+    await supabase.from("applications_staging").update({ status: newStatus }).eq("id", id);
   }
 
   /* ── Sign out ── */
