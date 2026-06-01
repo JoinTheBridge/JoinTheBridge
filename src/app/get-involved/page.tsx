@@ -172,64 +172,74 @@ export default function GetInvolvedPage() {
 
                                 <div className="flex flex-col items-center gap-8 relative">
                                     {/* National Level */}
-                                    <div className="z-10 w-full max-w-xs text-center p-4 bg-brand-navy text-white rounded-xl shadow-md border border-brand-navy/10">
-                                        <p className="text-brand-forest-light text-xs font-bold uppercase tracking-widest mb-1">
+                                    <div className="z-10 w-full max-w-sm text-center p-5 bg-brand-navy text-white rounded-xl shadow-md border border-brand-navy/10">
+                                        <p className="text-brand-forest-light text-xs font-bold uppercase tracking-widest mb-1.5">
                                             Central Governing Body
                                         </p>
-                                        <h4 className="font-extrabold text-sm md:text-base">
-                                            National Central Branch (HQ)
+                                        <h4 className="font-extrabold text-base md:text-lg">
+                                            Main Branch (HQ)
                                         </h4>
-                                        <p className="text-[10px] text-gray-400 mt-1">
-                                            Systems • Curriculum • Global Operations
-                                        </p>
+                                        <div className="mt-2.5 pt-2 border-t border-white/10 text-xs text-gray-300 space-y-1">
+                                            <div><strong className="text-white">Director:</strong> Jacky</div>
+                                            <div><strong className="text-white">Founders:</strong> Lucas, Sarayu, Koeyi</div>
+                                            <div><strong className="text-white">Tech Lead:</strong> Rohan</div>
+                                        </div>
                                     </div>
 
                                     {/* Connectors Row 1 */}
                                     <div className="w-0.5 h-8 bg-gray-200 -my-8" />
 
-                                    {/* Division / Coordinator Level */}
-                                    <div className="grid grid-cols-3 gap-3 w-full relative">
-                                        {/* Connector line behind */}
-                                        <div className="absolute top-1/2 left-4 right-4 h-0.5 bg-gray-200 -translate-y-1/2 -z-0" />
-                                        
-                                        {[
-                                            { name: "East Division", desc: "MD, VA, PA, NC" },
-                                            { name: "Central Division", desc: "IL, IN, OH, TX" },
-                                            { name: "West Division", desc: "CA, WA, OR, AZ" },
-                                        ].map((div) => (
-                                            <div key={div.name} className="z-10 p-3 bg-brand-forest text-white rounded-xl text-center shadow-sm border border-brand-forest/10">
-                                                <h5 className="font-bold text-xs">{div.name}</h5>
-                                                <p className="text-[9px] text-brand-forest-light mt-0.5">{div.desc}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    {/* Connectors Row 2 */}
-                                    <div className="grid grid-cols-3 w-full -mt-8 justify-items-center">
-                                        <div className="w-0.5 h-8 bg-gray-200" />
-                                        <div className="w-0.5 h-8 bg-gray-200" />
-                                        <div className="w-0.5 h-8 bg-gray-200" />
+                                    {/* Connector line behind */}
+                                    <div className="w-full relative">
+                                        <div className="absolute top-0 left-[16.6%] right-[16.6%] h-0.5 bg-gray-200" />
                                     </div>
 
                                     {/* State Branch Level */}
-                                    <div className="grid grid-cols-3 gap-3 w-full">
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full relative">
                                         {[
-                                            { name: "State Directors", desc: "Recruits & Partners" },
-                                            { name: "State Directors", desc: "Recruits & Partners" },
-                                            { name: "State Directors", desc: "Recruits & Partners" },
-                                        ].map((state, i) => (
-                                            <div key={i} className="p-3 bg-gray-50 text-brand-navy rounded-xl text-center border border-gray-200/60 shadow-sm">
-                                                <h5 className="font-extrabold text-xs">{state.name}</h5>
-                                                <p className="text-[9px] text-gray-500 mt-0.5">{state.desc}</p>
+                                            {
+                                                name: "Maryland Branch",
+                                                leader: "Sarayu",
+                                                role: "Founder & Lead",
+                                                details: "Econ, Ed, Math, Finance, Marketing",
+                                                color: "border-t-4 border-t-emerald-500",
+                                            },
+                                            {
+                                                name: "Mississippi Branch",
+                                                leader: "Koeyi",
+                                                role: "Founder & Lead",
+                                                details: "Math, English, History",
+                                                color: "border-t-4 border-t-sky-500",
+                                            },
+                                            {
+                                                name: "New York Branch",
+                                                leader: "Lucas",
+                                                role: "Founder & Lead",
+                                                details: "Operations, Secretary, Outreach, Media",
+                                                color: "border-t-4 border-t-indigo-500",
+                                            },
+                                        ].map((state) => (
+                                            <div
+                                                key={state.name}
+                                                className={`z-10 p-4 bg-gray-50 text-brand-navy rounded-xl text-center shadow-sm border border-gray-200/60 ${state.color}`}
+                                            >
+                                                <h5 className="font-extrabold text-sm">{state.name}</h5>
+                                                <div className="mt-2 text-xs">
+                                                    <p className="font-bold text-brand-forest">{state.leader}</p>
+                                                    <p className="text-[10px] text-gray-500">{state.role}</p>
+                                                </div>
+                                                <p className="text-[9px] text-gray-400 mt-2 pt-2 border-t border-gray-200/50">
+                                                    {state.details}
+                                                </p>
                                             </div>
                                         ))}
                                     </div>
 
                                     {/* Local Venues */}
                                     <div className="w-full flex justify-center gap-1.5 flex-wrap pt-2 border-t border-dashed border-gray-200">
-                                        <span className="px-2 py-0.5 bg-gray-100 rounded text-[9px] font-semibold text-gray-500 border border-gray-200/50">Local School Hosts</span>
-                                        <span className="px-2 py-0.5 bg-gray-100 rounded text-[9px] font-semibold text-gray-500 border border-gray-200/50">Local Church Hosts</span>
+                                        <span className="px-2 py-0.5 bg-gray-100 rounded text-[9px] font-semibold text-gray-500 border border-gray-200/50">Local Host Venues</span>
                                         <span className="px-2 py-0.5 bg-gray-100 rounded text-[9px] font-semibold text-gray-500 border border-gray-200/50">Tutor Cohorts</span>
+                                        <span className="px-2 py-0.5 bg-gray-100 rounded text-[9px] font-semibold text-gray-500 border border-gray-200/50">Community Partners</span>
                                     </div>
                                 </div>
                             </div>
