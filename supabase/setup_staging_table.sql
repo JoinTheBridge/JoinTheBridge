@@ -36,7 +36,8 @@ CREATE POLICY "Allow authenticated updates" ON applications_staging
   USING (true)
   WITH CHECK (true);
 
--- For development, allow anon reads too (remove in production):
-CREATE POLICY "Allow anon reads (dev)" ON applications_staging
-  FOR SELECT TO anon
-  USING (true);
+-- For development, allow anon reads too (disabled for security):
+-- CREATE POLICY "Allow anon reads (dev)" ON applications_staging
+--   FOR SELECT TO anon
+--   USING (true);
+

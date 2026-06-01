@@ -41,6 +41,16 @@ export default function RecruitmentForm() {
     setErrorMsg("");
 
     const formData = new FormData(e.currentTarget);
+    const honeypot = formData.get("website") as string;
+
+    // Honeypot check: If the bot filled this field, mock a successful submission without saving
+    if (honeypot) {
+      setTimeout(() => {
+        setStatus("success");
+      }, 1000);
+      (e.target as HTMLFormElement).reset();
+      return;
+    }
 
     const payload: ApplicationInsert = {
       full_name: formData.get("full_name") as string,
@@ -91,6 +101,18 @@ export default function RecruitmentForm() {
   /* ── Form ── */
   return (
     <form onSubmit={handleSubmit} className="card p-6 md:p-8">
+      {/* Honeypot field - completely hidden from screen readers and visual users */}
+      <div className="absolute opacity-0 pointer-events-none -z-10 w-0 h-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website (Leave blank)</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-200">
         <div className="w-2.5 h-2.5 rounded-full bg-brand-forest" />
         <h3 className="text-lg font-bold text-brand-navy">

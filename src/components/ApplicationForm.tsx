@@ -43,6 +43,7 @@ interface PersonalInfo {
   target_subject: string;
   why_bridge: string;
   heard_about: string;
+  website: string; // Honeypot field
 }
 
 /* ─── Input Styles ──────────────────────────────────────────────────────── */
@@ -75,6 +76,7 @@ export default function ApplicationForm({ role }: Props) {
     target_subject: "",
     why_bridge: "",
     heard_about: "",
+    website: "", // Honeypot field
   });
 
   /* ── Extra answers state (step 2) ── */
@@ -115,6 +117,14 @@ export default function ApplicationForm({ role }: Props) {
     e.preventDefault();
     setStatus("loading");
     setErrorMsg("");
+
+    // Honeypot check: If the bot filled this field, mock a successful submission without saving
+    if (personal.website) {
+      setTimeout(() => {
+        setStatus("success");
+      }, 1000);
+      return;
+    }
 
     const payload: ApplicationInsert = {
       full_name: personal.full_name,
@@ -183,6 +193,7 @@ export default function ApplicationForm({ role }: Props) {
               setPersonal({
                 full_name: "", email: "", phone: "", state: "",
                 target_subject: "", why_bridge: "", heard_about: "",
+                website: "",
               });
               setExtras(Object.fromEntries(role.questions.map((q) => [q.id, ""])));
             }}
@@ -226,6 +237,19 @@ export default function ApplicationForm({ role }: Props) {
         {/* ── STEP 1 ── */}
         {step === 1 && (
           <form onSubmit={handleNext} className="space-y-5">
+            {/* Honeypot field - completely hidden from screen readers and visual users */}
+            <div className="absolute opacity-0 pointer-events-none -z-10 w-0 h-0 overflow-hidden" aria-hidden="true">
+              <label htmlFor="website">Website (Leave blank)</label>
+              <input
+                id="website"
+                type="text"
+                tabIndex={-1}
+                value={personal.website}
+                onChange={(e) => updatePersonal("website", e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+
             {/* Name / Email side by side */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
