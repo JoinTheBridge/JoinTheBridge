@@ -20,6 +20,12 @@ CREATE TABLE IF NOT EXISTS applications_staging (
 -- Enable Row Level Security
 ALTER TABLE applications_staging ENABLE ROW LEVEL SECURITY;
 
+-- Drop policies if they already exist to ensure idempotency
+DROP POLICY IF EXISTS "Allow public inserts" ON applications_staging;
+DROP POLICY IF EXISTS "Allow authenticated reads" ON applications_staging;
+DROP POLICY IF EXISTS "Allow authenticated updates" ON applications_staging;
+DROP POLICY IF EXISTS "Allow anon reads (dev)" ON applications_staging;
+
 -- Allow inserts from anonymous users (public form submissions)
 CREATE POLICY "Allow public inserts" ON applications_staging
   FOR INSERT TO anon
