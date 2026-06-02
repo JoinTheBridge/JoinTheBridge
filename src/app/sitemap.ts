@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://jointhebridge.vercel.app";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://jointhebridge-test.vercel.app";
 
     // Static pages
     const staticPages = [
